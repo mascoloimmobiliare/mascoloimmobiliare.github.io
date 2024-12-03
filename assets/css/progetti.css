@@ -1,0 +1,301 @@
+.copertina img {
+    padding-top: 9vh;
+    width: 100%;
+    height: auto;
+    max-height: 100vh;
+}
+
+#descrizione,
+#caratteristiche {
+    padding: 5vw;
+    padding-inline: 12vw;
+}
+
+#descrizione h2 {
+    color: #1c5e3c;
+}
+
+.caratteristiche {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.caratteristiche>p {
+    color: #1c5e3c;
+    font-size: 2.5vw;
+    padding-top: 5vw;
+}
+
+.icons {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    padding-bottom: 15vw;
+}
+
+.iconCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconCard>p {
+    height: 8vw;
+    text-align: center;
+}
+
+.iconCard>svg {
+    height: 80px;
+    width: 80px;
+    margin-top: 10vw;
+    margin-bottom: 2vw;
+    padding: 10px;
+    border: 2px solid #1c5e3c;
+    border-radius: 50%;
+    fill: #1c5e3c;
+}
+
+.buttonCard {
+    width: min-content;
+    display: flex;
+    flex-direction: column;
+}
+
+#spanBrochure,
+#spanMappa {
+    margin-right: 2vh;
+    text-align: center;
+    color: white;
+    font-size: 1.5vw;
+}
+
+.infoButtons {
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.infoButtons button {
+    border: none;
+    background-color: #1c5e3c;
+    padding: 4vw;
+    padding-inline: 40px;
+}
+
+.infoButtons button:hover {
+    cursor: pointer;
+}
+
+.brochureButton,
+.mapButton {
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.brochureButton svg {
+    height: 5vw;
+    width: 5vw;
+}
+
+.buttonCard button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 9vh;
+    width: 100%;
+}
+
+.mappa {
+    padding-top: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#gallerySection h2 {
+    color: #1c5e3c;
+    text-align: center;
+    padding-top: 10vw;
+    padding-bottom: 4vw;
+}
+
+.galleryContainer {
+    width: 100%;
+    justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2vw;
+}
+
+.imageContainer {
+    width: 30vw;
+    /* Imposta la larghezza del contenitore */
+    height: 30vw;
+    /* Imposta l'altezza del contenitore */
+    overflow: hidden;
+    /* Nasconde la parte dell'immagine che fuoriesce */
+}
+
+.imageContainer img {
+    width: auto;
+    /* Larghezza automatica per mantenere le proporzioni */
+    height: 100%;
+    /* Altezza al 100% del contenitore */
+    object-fit: cover;
+    /* Ricopre il contenitore mantenendo le proporzioni */
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    padding-inline: 3vw;
+    row-gap: 4vw;
+}
+
+.thumbnailContainer {
+    width: 20vw;
+    height: 20vw;
+    overflow: hidden;
+}
+
+.thumbnail {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 33vh;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    position: relative;
+    margin: auto;
+    padding: 0;
+    width: 100vw;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f2f0eb;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: #f2f0eb;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (max-width: 600px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+        padding-inline: 2vw;
+    }
+
+    .thumbnailContainer {
+        width: 30vw;
+        height: 30vw;
+    }
+
+    #tourVirtuale h1 {
+        padding-top: 7.5vh;
+    }
+
+    .overlayTourVirtuale h2 {
+        font-size: 4.5vw;
+    }
+
+    #descrizione p {
+        text-align: center;
+    }
+
+    .buttonCard button {
+        height: auto;
+    }
+
+    .infoButtons button {
+        padding: 2vw;
+        padding-inline: 15vw;
+    }
+
+    .brochureButton svg {
+        height: 15vw;
+        width: 15vw;
+    }
+
+    .caratteristiche>p {
+        font-size: 5vw;
+    }
+
+    .icons {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #spanBrochure,
+    #spanMappa {
+        font-size: 4.3vw;
+    }
+
+    .iconCard>p {
+        font-size: 4.3vw;
+    }
+}
