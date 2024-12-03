@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://mascoloimmobiliare.it/sitemap.xml
