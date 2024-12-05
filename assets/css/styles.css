@@ -565,11 +565,11 @@ footer h2>a {
     width: 25px;
 }
 
-.credits {
+.credits, .cookies{
     padding-top: 1vw;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     padding-bottom: 2vw;
 }
 
