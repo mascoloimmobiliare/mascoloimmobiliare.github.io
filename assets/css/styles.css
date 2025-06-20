@@ -200,7 +200,8 @@ nav ul li a:hover {
 
 .villeCalu,
 .parcoZeno,
-.villaAria {
+.villaAria,
+.palazzoBruzzese {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
@@ -221,6 +222,10 @@ nav ul li a:hover {
 
 .villaAria {
     background-image: url('../images/villaAria/copertinaVerticaleVillaAria.jpg');
+}
+
+.palazzoBruzzese {
+    background-image: url('../images/PalazzoBruzzese/copertinaVerticalePalazzoBruzzese.jpg');
 }
 
 .carousel-item {

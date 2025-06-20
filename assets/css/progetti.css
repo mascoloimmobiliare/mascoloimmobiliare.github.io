@@ -168,30 +168,37 @@
 
 .thumbnail {
     height: 100%;
-    width: auto;
+    width: 100%;
     object-fit: cover;
     cursor: pointer;
 }
 
 .modal {
-    display: none;
+    display: flex;
+    justify-content: center; /* Centra orizzontalmente il contenuto della modale */
+    align-items: center; /* Centra verticalmente il contenuto della modale */
     position: fixed;
     z-index: 9999;
-    padding-top: 33vh;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
+    overflow: hidden; /* Importante: nasconde lo scroll della pagina sottostante */
     background-color: rgba(0, 0, 0, 0.9);
 }
 
 .modal-content {
-    position: relative;
-    margin: auto;
+    position: relative; /* ESSENZIALE: I figli con position: absolute si posizioneranno rispetto a questo */
+    margin: auto; /* Mantiene il centraggio automatico fallback */
     padding: 0;
-    width: 100vw;
-    max-width: 700px;
+    width: 100%; /* Occupa tutta la larghezza disponibile */
+    max-width: 900px; /* Limite massimo per evitare immagini troppo grandi */
+    max-height: 90vh; /* Limite massimo per evitare che l'immagine verticale esca dalla viewport */
+    display: flex; /* Centra le slide al suo interno */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Nasconde l'overflow se l'immagine è più grande (ma object-fit dovrebbe evitarlo) */
+    background-color: transparent; /* Assicurati che non ci sia un background che nasconda parti della galleria */
 }
 
 .close {
@@ -202,6 +209,11 @@
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
+    z-index: 10001; /* Assicurati che sia sopra i bottoni prev/next */
+    background: none; /* Assicurati che non abbia un background di default del browser */
+    border: none; /* Assicurati che non abbia un bordo di default del browser */
+    padding: 0; /* Rimuovi padding di default del browser se presente */
+    cursor: pointer;
 }
 
 .close:hover,
@@ -212,27 +224,47 @@
 }
 
 .mySlides {
-    display: none;
+    display: none; /* Gestito da JS per mostrare solo quella attiva */
+    width: 100%; /* Ogni slide occupa il 100% della larghezza del modal-content */
+    height: 100%; /* Ogni slide occupa il 100% dell'altezza del modal-content */
+    display: flex; /* Per centrare l'immagine al suo interno */
+    justify-content: center;
+    align-items: center;
 }
 
 .mySlides img {
-    width: 100%;
+    max-width: 100%; /* Non più larga del suo contenitore */
+    max-height: 100%; /* Non più alta del suo contenitore */
+    object-fit: contain; /* Scala l'immagine per intero, mantenendo proporzioni, bordi vuoti se necessari */
+    object-position: center; /* Centra l'immagine all'interno dell'area di object-fit */
+    display: block; /* Elimina spazi extra sotto l'immagine */
 }
 
 .prev,
 .next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
+    top: 50%; /* Posiziona l'inizio dell'elemento al 50% dell'altezza del genitore posizionato */
+    transform: translateY(-50%); /* Sposta l'elemento verso l'alto del 50% della sua altezza */
+    width: auto; /* Larghezza automatica per il contenuto (la freccia) */
+    padding: 16px; /* Spazio interno attorno alla freccia */
     color: #f2f0eb;
     font-weight: bold;
     font-size: 20px;
     transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
     user-select: none;
+    z-index: 10000; /* Deve essere sopra l'immagine ma sotto il bottone chiudi */
+    /* Aggiunte chiave per centrare e estendere i bottoni lungo l'altezza del modal-content */
+    height: 100%; /* Questo fa sì che il bottone occupi tutta l'altezza del .modal-content */
+    display: flex; /* Trasforma il bottone stesso in un contenitore flex */
+    align-items: center; /* Centra verticalmente la freccia all'interno del bottone */
+    background-color: rgba(0, 0, 0, 0.2); /* Sfondo leggermente visibile per i bottoni */
+    border: none; /* Rimuovi bordo di default del browser */
+}
+
+.prev {
+    left: 0;
+    border-radius: 0 3px 3px 0;
 }
 
 .next {
@@ -297,5 +329,29 @@
 
     .iconCard>p {
         font-size: 4.3vw;
+    }
+
+    .modal-content {
+        max-width: 95vw;
+        max-height: 95vh;
+    }
+
+    .close {
+        top: 5px;
+        right: 15px;
+        font-size: 30px;
+    }
+
+    .prev,
+    .next {
+        padding: 10px;
+        font-size: 16px;
+        /* Riduci l'area touch se troppo grande, ma mantieni la visibilità */
+        height: auto; /* Su mobile, potresti volere che i bottoni non occupino tutta l'altezza */
+        background-color: rgba(0, 0, 0, 0.5); /* Più scuro per visibilità su piccoli schermi */
+    }
+
+    .mySlides img {
+        max-height: 70vh;
     }
 }
