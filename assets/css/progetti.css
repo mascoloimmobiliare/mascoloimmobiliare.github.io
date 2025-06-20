@@ -174,7 +174,7 @@
 }
 
 .modal {
-    display: flex;
+    display: none;
     justify-content: center; /* Centra orizzontalmente il contenuto della modale */
     align-items: center; /* Centra verticalmente il contenuto della modale */
     position: fixed;
