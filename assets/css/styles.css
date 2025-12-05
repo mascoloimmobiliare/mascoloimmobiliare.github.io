@@ -201,7 +201,8 @@ nav ul li a:hover {
 .villeCalu,
 .parcoZeno,
 .villaAria,
-.palazzoBruzzese {
+.palazzoBruzzese,
+.villeSanBarbato {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
@@ -210,6 +211,10 @@ nav ul li a:hover {
     background-size: cover;
     background-position: right center;
     /* Mostra sempre il lato destro */
+}
+
+.villeSanBarbato {
+    background-image: url('../images/villeSanBarbato/copertinaVerticaleVilleSanBarbato.jpg');
 }
 
 .villeCalu {
