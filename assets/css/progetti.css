@@ -105,6 +105,11 @@
     width: 5vw;
 }
 
+.tourButton img {
+    height: 3vw;
+    width: 3vw;
+}
+
 .buttonCard button {
     display: flex;
     align-items: center;
@@ -311,9 +316,14 @@
         padding-inline: 15vw;
     }
 
-    .brochureButton svg {
+    .brochureButton svg{
         height: 15vw;
         width: 15vw;
+    }
+
+    .tourButton img{
+        height: 9vw;
+        width: 9vw;
     }
 
     .caratteristiche>p {

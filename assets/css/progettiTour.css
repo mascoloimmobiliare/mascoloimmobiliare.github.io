@@ -1,0 +1,9 @@
+#caratteristiche{
+    padding-inline: 0vw !important;
+}
+
+@media screen and (max-width: 600px) {
+    .infoButtons button {
+        padding-inline: 2vw !important;
+    }
+}
