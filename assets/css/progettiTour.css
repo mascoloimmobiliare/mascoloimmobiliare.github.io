@@ -1,9 +1,23 @@
-#caratteristiche{
+/* #caratteristiche{
     padding-inline: 0vw !important;
-}
+} */
 
 @media screen and (max-width: 600px) {
-    .infoButtons button {
+
+    /* .infoButtons button {
         padding-inline: 2vw !important;
+    } */
+
+    .infoButtons {
+        flex-direction: column !important;
     }
+
+    .tourButton {
+        margin-bottom: 2vh !important;
+    }
+
+    .brochureButton {
+        margin-top: 2vh !important;
+    }
+
 }
