@@ -66,7 +66,8 @@
 }
 
 #spanBrochure,
-#spanMappa {
+#spanMappa,
+#spanTour {
     margin-right: 2vh;
     text-align: center;
     color: white;
@@ -93,7 +94,8 @@
 }
 
 .brochureButton,
-.mapButton {
+.mapButton,
+.tourButton {
     border-radius: 5px;
     padding: 5px;
 }
@@ -323,7 +325,8 @@
     }
 
     #spanBrochure,
-    #spanMappa {
+    #spanMappa,
+    #spanTour {
         font-size: 4.3vw;
     }
 
