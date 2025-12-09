@@ -115,7 +115,8 @@
     align-items: center;
     justify-content: center;
     height: 9vh;
-    width: 100%;
+    width: 22vw;
+    height: 8vw;
 }
 
 .mappa {
@@ -312,12 +313,13 @@
     }
 
     .infoButtons button {
-        padding: 2vw;
-        padding-inline: 15vw;
+        width: 67vw;
+        padding: 4vw;
+        padding-inline: 9vw;
     }
 
     .brochureButton svg{
-        height: 15vw;
+        height: 10vw;
         width: 15vw;
     }
 
